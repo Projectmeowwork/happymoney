@@ -40,6 +40,51 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
 .stroke{-webkit-text-stroke:3px var(--ink);color:transparent;}
 .highlight{background:var(--lime);color:var(--ink);padding:0 12px;border-radius:12px;
   display:inline-block;transform:rotate(-1.5deg);}
+.hero-sub{color:var(--ink2);font-size:1.1rem;max-width:480แก้ไขให้เรียบร้อยแล้วค่ะ โดยเปลี่ยนรายชื่อแผนกในช่อง Dropdown เป็นตามที่คุณระบุทั้งหมดค่ะ
+
+```html
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Money 💸</title>
+<link href="[https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900;1000&family=Sarabun:wght@400;600;700&display=swap](https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900;1000&family=Sarabun:wght@400;600;700&display=swap)" rel="stylesheet">
+<style>
+:root {
+  --lime:#C8F135; --coral:#FF6B6B; --sky:#4ECDC4; --purple:#A855F7;
+  --orange:#FF9F43; --pink:#FF6EB4; --blue:#60A5FA;
+  --bg:#F5F2EB; --white:#FFFFFF; --ink:#1A1A2E; --ink2:#4A4A6A;
+  --r:24px; --rsm:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Sarabun',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(circle 450px at 5% 15%,rgba(200,241,53,.18) 0%,transparent 70%),
+    radial-gradient(circle 350px at 92% 8%,rgba(255,107,107,.13) 0%,transparent 70%),
+    radial-gradient(circle 320px at 85% 82%,rgba(78,205,196,.15) 0%,transparent 70%),
+    radial-gradient(circle 280px at 15% 88%,rgba(168,85,247,.10) 0%,transparent 70%);}
+
+header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+  padding:0 32px;height:68px;background:rgba(245,242,235,.88);backdrop-filter:blur(16px);
+  border-bottom:2px solid rgba(26,26,46,.07);}
+.logo{font-family:'Nunito',sans-serif;font-weight:900;font-size:1.5rem;display:flex;align-items:center;gap:8px;}
+.logo-pill{background:var(--ink);color:var(--lime);padding:4px 14px;border-radius:99px;}
+.logo-rest{color:var(--ink);}
+.week-badge{background:var(--white);border:2px solid var(--ink);border-radius:99px;
+  padding:6px 16px;font-size:.8rem;font-weight:700;box-shadow:3px 3px 0 var(--ink);}
+
+.hero{position:relative;z-index:1;padding:72px 32px 56px;max-width:900px;margin:0 auto;text-align:center;}
+.hero-chip{display:inline-flex;align-items:center;gap:6px;background:var(--ink);color:var(--lime);
+  font-family:'Nunito',sans-serif;font-weight:800;font-size:.78rem;padding:6px 18px;border-radius:99px;
+  letter-spacing:1.5px;margin-bottom:28px;animation:bob 3s ease-in-out infinite;}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.hero h1{font-family:'Nunito',sans-serif;font-weight:1000;font-size:clamp(2.6rem,7vw,5.2rem);
+  line-height:1.05;margin-bottom:20px;letter-spacing:-1.5px;}
+.stroke{-webkit-text-stroke:3px var(--ink);color:transparent;}
+.highlight{background:var(--lime);color:var(--ink);padding:0 12px;border-radius:12px;
+  display:inline-block;transform:rotate(-1.5deg);}
 .hero-sub{color:var(--ink2);font-size:1.1rem;max-width:480px;margin:0 auto 48px;line-height:1.75;}
 .doodle{position:absolute;font-size:2rem;pointer-events:none;animation:bob 4s ease-in-out infinite;}
 .d1{top:10%;left:5%;} .d2{top:20%;right:6%;animation-delay:1s;font-size:2.4rem;}
@@ -287,7 +332,6 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
   </div>
 </section>
 
-<!-- MODAL -->
 <div class="modal-overlay" id="modal">
   <div class="modal-box">
     <div class="modal-top">
@@ -305,13 +349,16 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
         <div class="field"><label>แผนก</label>
           <select id="pDept">
             <option value="">-- เลือกแผนก --</option>
-            <option>HR</option>
-            <option>Finance</option>
-            <option>Marketing</option>
-            <option>IT</option>
-            <option>Operations</option>
-            <option>Sales</option>
-            <option>Admin</option>
+            <option>PAC2</option>
+            <option>PAC1</option>
+            <option>Motor&Plastic</option>
+            <option>PSI</option>
+            <option>PIPE</option>
+            <option>IE</option>
+            <option>Heat</option>
+            <option>MatCon</option>
+            <option>TPP&Paint</option>
+            <option>IFA</option>
           </select>
         </div>
         <button class="big-btn" onclick="startGame()">🎮 เริ่มเลย!</button>
@@ -326,6 +373,7 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
         </div>
         <div class="q-text" id="qText"></div>
         <div class="hint-bar">👆 <span>คลิกที่ของที่เป็น <strong>ค่าใช้จ่ายไม่จำเป็น</strong> ในภาพให้ครบทุกชิ้น</span></div>
+        <div class="hint-bar">✨ <span>ใช้ Prompt คิวท์ๆ ที่พี่แนะนำ เจนรูปมาใส่ตรง scene-bg ได้เลยนะ!</span></div>
         <div class="find-list" id="findList"></div>
         <div class="scene-wrap"><div class="scene-inner"><div class="scene-bg" id="scene"></div></div></div>
         <button class="next-btn" id="nBtn" onclick="nextRound()">ด่านถัดไป →</button>
@@ -352,7 +400,7 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
 <div class="toast" id="toast"></div>
 
 <script>
-const SHEET_URL = 'https://script.google.com/macros/s/AKfycbzEVNJJZUA_09gFqvD5hMi7ntgQO-cQqwXhGGaAa13BNUTPdRjeoi7Q-8g6L18fp3zl2g/exec';
+const SHEET_URL = '[https://script.google.com/macros/s/AKfycbzEVNJJZUA_09gFqvD5hMi7ntgQO-cQqwXhGGaAa13BNUTPdRjeoi7Q-8g6L18fp3zl2g/exec](https://script.google.com/macros/s/AKfycbzEVNJJZUA_09gFqvD5hMi7ntgQO-cQqwXhGGaAa13BNUTPdRjeoi7Q-8g6L18fp3zl2g/exec)';
 
 const rounds=[
   {q:"โต๊ะทำงานของ <strong>คุณสมชาย</strong> มีอะไรบ้างที่ซื้อมาแต่ไม่เคยใช้?",
@@ -503,6 +551,7 @@ function loadRound(){
       <div class="chip-circle" id="cc_${it.id}"></div>${it.e} ${it.l}
     </div>`).join('');
   const sc=document.getElementById('scene');
+  // ใส่รูปพื้นหลังที่นี่
   sc.style.background=r.bg;
   sc.innerHTML=`<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:5rem;opacity:.07">🏠</div>
     ${r.items.map(it=>`
@@ -578,3 +627,4 @@ loadLeaderboard();
 </script>
 </body>
 </html>
+
