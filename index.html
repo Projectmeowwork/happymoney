@@ -21,7 +21,6 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
     radial-gradient(circle 320px at 85% 82%,rgba(78,205,196,.15) 0%,transparent 70%),
     radial-gradient(circle 280px at 15% 88%,rgba(168,85,247,.10) 0%,transparent 70%);}
 
-/* ── HEADER ── */
 header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
   padding:0 32px;height:68px;background:rgba(245,242,235,.88);backdrop-filter:blur(16px);
   border-bottom:2px solid rgba(26,26,46,.07);}
@@ -31,7 +30,6 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
 .week-badge{background:var(--white);border:2px solid var(--ink);border-radius:99px;
   padding:6px 16px;font-size:.8rem;font-weight:700;box-shadow:3px 3px 0 var(--ink);}
 
-/* ── HERO ── */
 .hero{position:relative;z-index:1;padding:72px 32px 56px;max-width:900px;margin:0 auto;text-align:center;}
 .hero-chip{display:inline-flex;align-items:center;gap:6px;background:var(--ink);color:var(--lime);
   font-family:'Nunito',sans-serif;font-weight:800;font-size:.78rem;padding:6px 18px;border-radius:99px;
@@ -44,12 +42,9 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
   display:inline-block;transform:rotate(-1.5deg);}
 .hero-sub{color:var(--ink2);font-size:1.1rem;max-width:480px;margin:0 auto 48px;line-height:1.75;}
 .doodle{position:absolute;font-size:2rem;pointer-events:none;animation:bob 4s ease-in-out infinite;}
-.d1{top:10%;left:5%;animation-delay:0s;}
-.d2{top:20%;right:6%;animation-delay:1s;font-size:2.4rem;}
-.d3{bottom:15%;left:8%;animation-delay:1.5s;font-size:1.6rem;}
-.d4{bottom:20%;right:5%;animation-delay:.7s;}
+.d1{top:10%;left:5%;} .d2{top:20%;right:6%;animation-delay:1s;font-size:2.4rem;}
+.d3{bottom:15%;left:8%;animation-delay:1.5s;font-size:1.6rem;} .d4{bottom:20%;right:5%;animation-delay:.7s;}
 
-/* ── STATS ── */
 .stats-row{position:relative;z-index:1;display:flex;gap:16px;justify-content:center;
   padding:0 24px 64px;flex-wrap:wrap;}
 .stat-pill{background:var(--white);border:2px solid var(--ink);border-radius:99px;padding:12px 28px;
@@ -58,7 +53,6 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
 .stat-pill:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink);}
 .stat-num{font-family:'Nunito',sans-serif;font-weight:900;font-size:1.3rem;}
 
-/* ── GAMES ── */
 .games-section{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 24px 80px;}
 .sec-label{font-family:'Nunito',sans-serif;font-weight:900;font-size:1rem;color:var(--ink2);
   letter-spacing:2px;margin-bottom:24px;display:flex;align-items:center;gap:12px;}
@@ -70,13 +64,11 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
 .game-card:hover{transform:translate(-4px,-4px);box-shadow:10px 10px 0 var(--ink);}
 .game-card.coming{opacity:.55;cursor:not-allowed;}
 .game-card.coming:hover{transform:none;box-shadow:6px 6px 0 var(--ink);}
-.card-color-1{background:#FFFBEB;}
-.card-color-2{background:#F0FFF4;}
+.card-color-1{background:#FFFBEB;} .card-color-2{background:#F0FFF4;}
 .card-icon-wrap{width:64px;height:64px;border-radius:18px;border:2px solid var(--ink);
   display:flex;align-items:center;justify-content:center;font-size:2rem;
   margin-bottom:20px;box-shadow:3px 3px 0 var(--ink);}
-.ci-1{background:var(--lime);}
-.ci-2{background:#C8F1FF;}
+.ci-1{background:var(--lime);} .ci-2{background:#C8F1FF;}
 .live-badge{display:inline-flex;align-items:center;gap:5px;background:var(--ink);color:var(--lime);
   font-family:'Nunito',sans-serif;font-weight:800;font-size:.7rem;padding:4px 12px;
   border-radius:99px;letter-spacing:1px;margin-bottom:12px;}
@@ -92,12 +84,15 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
   box-shadow:3px 3px 0 rgba(26,26,46,.3);transition:transform .15s cubic-bezier(.34,1.56,.64,1),box-shadow .15s;}
 .play-btn:hover{transform:scale(1.06);box-shadow:4px 4px 0 rgba(26,26,46,.4);}
 
-/* ── LEADERBOARD ── */
 .lb-section{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 24px 80px;}
 .lb-card{background:var(--white);border:2px solid var(--ink);border-radius:var(--r);
   box-shadow:6px 6px 0 var(--ink);overflow:hidden;}
 .lb-head{background:var(--ink);color:var(--lime);padding:20px 28px;
-  font-family:'Nunito',sans-serif;font-weight:900;font-size:1.1rem;display:flex;align-items:center;gap:10px;}
+  font-family:'Nunito',sans-serif;font-weight:900;font-size:1.1rem;display:flex;align-items:center;justify-content:space-between;}
+.lb-refresh{background:transparent;border:1.5px solid rgba(200,241,53,.4);color:var(--lime);
+  border-radius:99px;padding:4px 14px;font-size:.75rem;font-weight:700;cursor:pointer;
+  transition:all .2s;font-family:'Nunito',sans-serif;}
+.lb-refresh:hover{background:rgba(200,241,53,.15);}
 .lb-row{display:flex;align-items:center;gap:16px;padding:16px 28px;
   border-bottom:2px solid rgba(26,26,46,.06);transition:background .15s;}
 .lb-row:last-child{border-bottom:none;}
@@ -110,8 +105,10 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
 .lb-name span{font-size:.82rem;color:var(--ink2);}
 .lb-score{background:var(--lime);color:var(--ink);font-family:'Nunito',sans-serif;
   font-weight:900;font-size:.9rem;padding:6px 16px;border-radius:99px;border:2px solid var(--ink);}
+.lb-time{font-size:.75rem;color:var(--ink2);margin-left:8px;white-space:nowrap;}
+.lb-loading{text-align:center;padding:32px;color:var(--ink2);font-size:.95rem;}
+.lb-empty{text-align:center;padding:32px;color:var(--ink2);}
 
-/* ══ MODAL ══ */
 .modal-overlay{display:none;position:fixed;inset:0;z-index:100;
   background:rgba(26,26,46,.6);backdrop-filter:blur(8px);
   align-items:center;justify-content:center;padding:16px;}
@@ -121,19 +118,15 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
   max-height:92vh;overflow-y:auto;animation:popIn .35s cubic-bezier(.34,1.56,.64,1);}
 @keyframes popIn{from{transform:scale(.8) translateY(40px);opacity:0}to{transform:scale(1) translateY(0);opacity:1}}
 .modal-top{padding:28px 32px 0;display:flex;align-items:center;justify-content:space-between;}
-.modal-title{font-family:'Nunito',sans-serif;font-weight:900;font-size:1.5rem;
-  display:flex;align-items:center;gap:10px;}
+.modal-title{font-family:'Nunito',sans-serif;font-weight:900;font-size:1.5rem;display:flex;align-items:center;gap:10px;}
 .close-btn{width:40px;height:40px;border-radius:50%;border:2px solid var(--ink);background:var(--white);
   font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;
   transition:all .15s;box-shadow:2px 2px 0 var(--ink);}
 .close-btn:hover{background:var(--coral);color:#fff;transform:scale(1.1);}
 .modal-body{padding:28px 32px 32px;}
 
-/* ── STEPS ── */
-.step{display:none;}
-.step.active{display:block;}
+.step{display:none;} .step.active{display:block;}
 
-/* Register */
 .reg-emoji{font-size:3.5rem;text-align:center;margin-bottom:16px;}
 .reg-title{font-family:'Nunito',sans-serif;font-weight:900;font-size:1.6rem;text-align:center;margin-bottom:6px;}
 .reg-sub{text-align:center;color:var(--ink2);margin-bottom:28px;font-size:.95rem;}
@@ -150,7 +143,6 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
   transition:transform .2s cubic-bezier(.34,1.56,.64,1),box-shadow .2s;}
 .big-btn:hover{transform:translateY(-3px);box-shadow:4px 7px 0 rgba(26,26,46,.25);}
 
-/* Game step */
 .progress-track{background:rgba(26,26,46,.08);border-radius:99px;height:10px;
   margin-bottom:28px;overflow:hidden;border:1.5px solid rgba(26,26,46,.1);}
 .progress-fill{height:100%;background:linear-gradient(90deg,var(--lime),var(--sky));
@@ -160,12 +152,17 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
   background:var(--ink);color:var(--lime);padding:6px 16px;border-radius:99px;}
 .score-tag{background:var(--lime);color:var(--ink);font-family:'Nunito',sans-serif;
   font-weight:900;padding:6px 16px;border-radius:99px;border:2px solid var(--ink);font-size:.95rem;}
+/* timer */
+.timer-tag{background:var(--white);color:var(--ink);font-family:'Nunito',sans-serif;
+  font-weight:900;padding:6px 16px;border-radius:99px;border:2px solid var(--ink);
+  font-size:.95rem;min-width:80px;text-align:center;}
+.timer-tag.fast{border-color:var(--lime);color:var(--green);}
+
 .q-text{font-size:1rem;line-height:1.7;color:var(--ink2);margin-bottom:16px;}
 .q-text strong{color:var(--ink);}
 .hint-bar{background:#FFFBEB;border:2px solid #F59E0B;border-radius:14px;padding:12px 18px;
   margin-bottom:20px;font-size:.88rem;font-weight:600;display:flex;align-items:center;gap:10px;color:#92400E;}
 
-/* find chips */
 .find-list{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;}
 .find-chip{background:var(--bg);border:2px solid rgba(26,26,46,.15);border-radius:99px;
   padding:8px 16px;font-size:.83rem;font-weight:700;display:flex;align-items:center;gap:6px;
@@ -175,7 +172,6 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
   display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:900;transition:all .2s;}
 .find-chip.found .chip-circle{background:var(--ink);border-color:var(--ink);color:var(--lime);}
 
-/* Scene */
 .scene-wrap{border:2px solid var(--ink);border-radius:20px;overflow:hidden;
   margin-bottom:20px;box-shadow:5px 5px 0 var(--ink);}
 .scene-inner{position:relative;width:100%;padding-top:55%;}
@@ -199,19 +195,20 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
 .next-btn.go{opacity:1;pointer-events:all;}
 .next-btn.go:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 rgba(26,26,46,.2);}
 
-/* Result */
 .result-wrap{text-align:center;padding:20px 0;}
 .result-big{font-size:5rem;margin-bottom:16px;animation:bob 2s ease-in-out infinite;}
 .result-wrap h2{font-family:'Nunito',sans-serif;font-weight:900;font-size:2rem;margin-bottom:10px;}
-.result-score{font-size:1.1rem;color:var(--ink2);margin-bottom:32px;}
+.result-score{font-size:1.1rem;color:var(--ink2);margin-bottom:8px;}
 .result-score strong{font-family:'Nunito',sans-serif;font-weight:900;font-size:2.5rem;color:var(--ink);}
+.result-time{font-size:.95rem;color:var(--ink2);margin-bottom:32px;}
+.result-time strong{color:var(--purple);font-weight:800;}
 .result-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
 .btn-ghost{background:transparent;border:2px solid var(--ink);border-radius:14px;padding:13px 28px;
   font-family:'Nunito',sans-serif;font-weight:800;font-size:.95rem;cursor:pointer;
   box-shadow:3px 3px 0 var(--ink);transition:all .15s;}
 .btn-ghost:hover{background:var(--bg);transform:translate(-1px,-1px);}
+.saving-note{font-size:.82rem;color:var(--ink2);margin-top:16px;text-align:center;}
 
-/* Toast */
 .toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);z-index:300;
   background:var(--ink);color:var(--white);font-family:'Nunito',sans-serif;font-weight:800;
   padding:14px 28px;border-radius:99px;font-size:.95rem;box-shadow:4px 4px 0 rgba(26,26,46,.3);
@@ -220,14 +217,9 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
 .toast.ok{background:var(--ink);border:2px solid var(--lime);}
 .toast.bad{background:var(--coral);}
 
-/* Confetti */
-.confetti-piece{position:fixed;pointer-events:none;z-index:400;
-  animation:cffall linear forwards;}
+.confetti-piece{position:fixed;pointer-events:none;z-index:400;animation:cffall linear forwards;}
 @keyframes cffall{0%{opacity:1;transform:translateY(-20px) rotate(0deg)}100%{opacity:0;transform:translateY(100vh) rotate(720deg)}}
-
-/* Sparkle */
-.sparkle{position:fixed;pointer-events:none;z-index:400;font-size:1.8rem;
-  animation:sparkUp .8s ease forwards;}
+.sparkle{position:fixed;pointer-events:none;z-index:400;font-size:1.8rem;animation:sparkUp .8s ease forwards;}
 @keyframes sparkUp{0%{opacity:1;transform:translateY(0) scale(1)}100%{opacity:0;transform:translateY(-90px) scale(.4)}}
 
 @media(max-width:600px){
@@ -242,18 +234,13 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
 <body>
 
 <header>
-  <div class="logo">
-    <div class="logo-pill">Happy</div>
-    <div class="logo-rest">Money 💸</div>
-  </div>
+  <div class="logo"><div class="logo-pill">Happy</div><div class="logo-rest">Money 💸</div></div>
   <div class="week-badge">📅 สัปดาห์ที่ 1</div>
 </header>
 
 <section class="hero">
-  <div class="doodle d1">🎯</div>
-  <div class="doodle d2">✨</div>
-  <div class="doodle d3">🪙</div>
-  <div class="doodle d4">🎮</div>
+  <div class="doodle d1">🎯</div><div class="doodle d2">✨</div>
+  <div class="doodle d3">🪙</div><div class="doodle d4">🎮</div>
   <div class="hero-chip"><span>💰</span> HAPPY WORKPLACE · HAPPY MONEY</div>
   <h1>
     <span style="color:var(--ink)">รู้จัก</span>
@@ -266,7 +253,7 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
 
 <div class="stats-row">
   <div class="stat-pill">🎮 <span class="stat-num">1</span> เกมพร้อมเล่น</div>
-  <div class="stat-pill">👥 <span class="stat-num">24</span> คนเล่นแล้ว</div>
+  <div class="stat-pill">👥 <span class="stat-num" id="totalPlayers">-</span> คนเล่นแล้ว</div>
   <div class="stat-pill">🏆 <span class="stat-num">3</span> รางวัลรออยู่</div>
 </div>
 
@@ -292,25 +279,11 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
 <section class="lb-section">
   <div class="sec-label">🏅 ผู้นำตาราง สัปดาห์นี้</div>
   <div class="lb-card">
-    <div class="lb-head">🏆 Top Players · Week 1</div>
-    <div class="lb-row">
-      <div class="lb-rank">🥇</div>
-      <div class="lb-avatar" style="background:var(--lime)">😊</div>
-      <div class="lb-name"><strong>สมใจ รักออม</strong><span>HR · เล่นเมื่อวาน</span></div>
-      <div class="lb-score">5/5 ⭐</div>
+    <div class="lb-head">
+      <span>🏆 Top Players · เรียงตามคะแนน + เวลา</span>
+      <button class="lb-refresh" onclick="loadLeaderboard()">🔄 รีเฟรช</button>
     </div>
-    <div class="lb-row">
-      <div class="lb-rank">🥈</div>
-      <div class="lb-avatar" style="background:#C8F1FF">🙂</div>
-      <div class="lb-name"><strong>วิชัย ประหยัด</strong><span>Finance · 2 วันที่แล้ว</span></div>
-      <div class="lb-score">4/5 ⭐</div>
-    </div>
-    <div class="lb-row">
-      <div class="lb-rank">🥉</div>
-      <div class="lb-avatar" style="background:#FFD6E0">😄</div>
-      <div class="lb-name"><strong>มะลิ ชาญฉลาด</strong><span>Marketing · 3 วันที่แล้ว</span></div>
-      <div class="lb-score">4/5 ⭐</div>
-    </div>
+    <div id="lbBody"><div class="lb-loading">⏳ กำลังโหลด...</div></div>
   </div>
 </section>
 
@@ -323,7 +296,6 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
     </div>
     <div class="modal-body">
 
-      <!-- Register -->
       <div class="step active" id="sReg">
         <div class="reg-emoji">👋</div>
         <div class="reg-title">สวัสดีนักล่าค่าใช้จ่าย!</div>
@@ -332,20 +304,25 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
         <div class="field"><label>รหัสพนักงาน</label><input id="pCode" type="text" placeholder="เช่น EMP-001"></div>
         <div class="field"><label>แผนก</label>
           <select id="pDept">
-            <option value="">เลือกแผนก</option>
-            <option>HR</option><option>Finance</option><option>Marketing</option>
-            <option>IT</option><option>Operations</option><option>Sales</option><option>Admin</option>
+            <option value="">-- เลือกแผนก --</option>
+            <option>HR</option>
+            <option>Finance</option>
+            <option>Marketing</option>
+            <option>IT</option>
+            <option>Operations</option>
+            <option>Sales</option>
+            <option>Admin</option>
           </select>
         </div>
         <button class="big-btn" onclick="startGame()">🎮 เริ่มเลย!</button>
       </div>
 
-      <!-- Game -->
       <div class="step" id="sGame">
         <div class="progress-track"><div class="progress-fill" id="pBar" style="width:20%"></div></div>
         <div class="round-bar">
           <div class="round-tag" id="roundTag">ด่าน 1/5</div>
           <div class="score-tag">⭐ <span id="scoreNum">0</span> คะแนน</div>
+          <div class="timer-tag" id="timerTag">⏱ 0:00</div>
         </div>
         <div class="q-text" id="qText"></div>
         <div class="hint-bar">👆 <span>คลิกที่ของที่เป็น <strong>ค่าใช้จ่ายไม่จำเป็น</strong> ในภาพให้ครบทุกชิ้น</span></div>
@@ -354,16 +331,17 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
         <button class="next-btn" id="nBtn" onclick="nextRound()">ด่านถัดไป →</button>
       </div>
 
-      <!-- Result -->
       <div class="step" id="sResult">
         <div class="result-wrap">
           <div class="result-big" id="rEmoji">🏆</div>
           <h2 id="rTitle">สุดยอด!</h2>
           <div class="result-score">คุณได้ <strong id="rScore">0</strong>/5 คะแนน</div>
+          <div class="result-time">เวลารวม: <strong id="rTime">0:00</strong> นาที</div>
           <div class="result-actions">
             <button class="btn-ghost" onclick="closeModal()">↩ กลับหน้าหลัก</button>
             <button class="play-btn" onclick="restart()">🔄 เล่นอีกรอบ</button>
           </div>
+          <div class="saving-note" id="savingNote">💾 กำลังบันทึกคะแนน...</div>
         </div>
       </div>
 
@@ -374,6 +352,8 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
 <div class="toast" id="toast"></div>
 
 <script>
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbzEVNJJZUA_09gFqvD5hMi7ntgQO-cQqwXhGGaAa13BNUTPdRjeoi7Q-8g6L18fp3zl2g/exec';
+
 const rounds=[
   {q:"โต๊ะทำงานของ <strong>คุณสมชาย</strong> มีอะไรบ้างที่ซื้อมาแต่ไม่เคยใช้?",
    bg:"linear-gradient(135deg,#E8F4FD,#D6EAF8)",
@@ -412,18 +392,103 @@ const rounds=[
    tip:'Delivery ทุกวัน + Streaming ซ้อน + ลอตเตอรี่ = หมดหลักพันต่อเดือน!'}
 ];
 
-let cur=0,score=0,found=[];
+const avatarBg=['#C8F135','#C8F1FF','#FFD6E0','#D5F5E3','#EDE9FE','#FEF3C7'];
+const avatarEmoji=['😊','🙂','😄','😎','🥳','😇','🤩','😸'];
 
+let cur=0, score=0, found=[], startTime=0, timerInterval=null;
+let playerName='', playerCode='', playerDept='';
+
+/* ── LEADERBOARD ── */
+async function loadLeaderboard(){
+  document.getElementById('lbBody').innerHTML='<div class="lb-loading">⏳ กำลังโหลด...</div>';
+  try {
+    const res = await fetch(SHEET_URL);
+    const data = await res.json();
+    renderLeaderboard(data);
+    // update total players stat
+    if(data.length>0) document.getElementById('totalPlayers').textContent=data.length;
+  } catch(err) {
+    document.getElementById('lbBody').innerHTML='<div class="lb-empty">⚠️ ไม่สามารถโหลดข้อมูลได้<br><small>ลองกด รีเฟรช อีกครั้ง</small></div>';
+  }
+}
+
+function renderLeaderboard(players){
+  if(!players||players.length===0){
+    document.getElementById('lbBody').innerHTML='<div class="lb-empty">🎮 ยังไม่มีผู้เล่น เป็นคนแรกเลย!</div>';
+    return;
+  }
+  const medals=['🥇','🥈','🥉'];
+  const html = players.slice(0,10).map((p,i)=>{
+    const mins=Math.floor((p.timeSec||0)/60);
+    const secs=String((p.timeSec||0)%60).padStart(2,'0');
+    const timeStr=`${mins}:${secs}`;
+    const bg=avatarBg[i%avatarBg.length];
+    const em=avatarEmoji[i%avatarEmoji.length];
+    return `<div class="lb-row">
+      <div class="lb-rank">${medals[i]||'#'+(i+1)}</div>
+      <div class="lb-avatar" style="background:${bg}">${em}</div>
+      <div class="lb-name">
+        <strong>${p.name||'-'}</strong>
+        <span>${p.dept||''}</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <div class="lb-score">${p.score||0}/5 ⭐</div>
+        <div class="lb-time">⏱${timeStr}</div>
+      </div>
+    </div>`;
+  }).join('');
+  document.getElementById('lbBody').innerHTML=html;
+}
+
+/* ── SAVE SCORE ── */
+async function saveScore(timeSec){
+  try{
+    await fetch(SHEET_URL,{
+      method:'POST',
+      mode:'no-cors',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({name:playerName,empCode:playerCode,dept:playerDept,score,timeSec})
+    });
+    document.getElementById('savingNote').textContent='✅ บันทึกคะแนนแล้ว!';
+    loadLeaderboard();
+  } catch(e){
+    document.getElementById('savingNote').textContent='⚠️ บันทึกไม่สำเร็จ กรุณาแจ้งผู้ดูแล';
+  }
+}
+
+/* ── TIMER ── */
+function startTimer(){
+  startTime=Date.now();
+  clearInterval(timerInterval);
+  timerInterval=setInterval(()=>{
+    const sec=Math.floor((Date.now()-startTime)/1000);
+    const m=Math.floor(sec/60), s=String(sec%60).padStart(2,'0');
+    document.getElementById('timerTag').textContent=`⏱ ${m}:${s}`;
+  },500);
+}
+function stopTimer(){
+  clearInterval(timerInterval);
+  return Math.floor((Date.now()-startTime)/1000);
+}
+
+/* ── MODAL ── */
 function openModal(){document.getElementById('modal').classList.add('open');showStep('sReg');}
-function closeModal(){document.getElementById('modal').classList.remove('open');cur=0;score=0;found=[];}
+function closeModal(){
+  document.getElementById('modal').classList.remove('open');
+  clearInterval(timerInterval);
+  cur=0;score=0;found=[];
+}
 function showStep(id){document.querySelectorAll('.step').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');}
 
 function startGame(){
-  const n=document.getElementById('pName').value.trim();
-  const c=document.getElementById('pCode').value.trim();
-  const d=document.getElementById('pDept').value;
-  if(!n||!c||!d){toast('❗ กรอกข้อมูลให้ครบก่อนนะ','bad');return;}
-  cur=0;score=0;found=[];loadRound();showStep('sGame');
+  playerName=document.getElementById('pName').value.trim();
+  playerCode=document.getElementById('pCode').value.trim();
+  playerDept=document.getElementById('pDept').value;
+  if(!playerName||!playerCode||!playerDept){toast('❗ กรอกข้อมูลให้ครบก่อนนะ','bad');return;}
+  cur=0;score=0;found=[];
+  loadRound();
+  startTimer();
+  showStep('sGame');
 }
 
 function loadRound(){
@@ -450,8 +515,7 @@ function loadRound(){
 function hit(id,label,emoji){
   if(found.includes(id))return;
   found.push(id);
-  const hs=document.getElementById('hs_'+id);
-  hs.classList.add('found');
+  document.getElementById('hs_'+id).classList.add('found');
   const fc=document.getElementById('fc_'+id);
   if(fc){fc.classList.add('found');document.getElementById('cc_'+id).textContent='✓';}
   toast('✅ '+emoji+' '+label,'ok');
@@ -467,38 +531,40 @@ function hit(id,label,emoji){
 function nextRound(){cur++;if(cur>=5)showResult();else loadRound();}
 
 function showResult(){
+  const timeSec=stopTimer();
   showStep('sResult');
   document.getElementById('rScore').textContent=score;
+  const m=Math.floor(timeSec/60),s=String(timeSec%60).padStart(2,'0');
+  document.getElementById('rTime').textContent=`${m}:${s}`;
   let e='😅',t='ลองอีกครั้งนะ!';
   if(score===5){e='🏆';t='สุดยอดมาก! มือโปร!';}
   else if(score>=4){e='🌟';t='เก่งมาก! เกือบเต็มแล้ว!';}
   else if(score>=3){e='😊';t='ดีมาก ฝึกต่อไป!';}
   document.getElementById('rEmoji').textContent=e;
   document.getElementById('rTitle').textContent=t;
+  document.getElementById('savingNote').textContent='💾 กำลังบันทึกคะแนน...';
   confetti();
+  saveScore(timeSec);
 }
 
-function restart(){cur=0;score=0;found=[];loadRound();showStep('sGame');}
+function restart(){cur=0;score=0;found=[];loadRound();startTimer();showStep('sGame');}
 
 function toast(msg,type){
   const t=document.getElementById('toast');
   t.textContent=msg;t.className=`toast ${type} show`;
   clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2800);
 }
-
 function spawnSparkle(e){
   const s=document.createElement('div');s.className='sparkle';s.textContent=e;
   s.style.left=(20+Math.random()*60)+'vw';s.style.top=(25+Math.random()*40)+'vh';
   document.body.appendChild(s);setTimeout(()=>s.remove(),900);
 }
-
 function confetti(){
   const colors=['#C8F135','#FF6B6B','#4ECDC4','#A855F7','#FF9F43','#FF6EB4'];
   for(let i=0;i<60;i++){
     const c=document.createElement('div');c.className='confetti-piece';
-    const dur=1.2+Math.random()*1.5;
     c.style.cssText=`left:${Math.random()*100}vw;top:-10px;background:${colors[~~(Math.random()*colors.length)]};
-      animation-duration:${dur}s;animation-delay:${Math.random()*.4}s;
+      animation-duration:${1.2+Math.random()*1.5}s;animation-delay:${Math.random()*.4}s;
       width:${8+Math.random()*8}px;height:${8+Math.random()*8}px;
       border-radius:${Math.random()>.5?'50%':'3px'};`;
     document.body.appendChild(c);setTimeout(()=>c.remove(),3000);
@@ -506,6 +572,9 @@ function confetti(){
 }
 
 document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)closeModal();});
+
+// Load leaderboard on page load
+loadLeaderboard();
 </script>
 </body>
 </html>
