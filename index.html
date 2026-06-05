@@ -40,6 +40,51 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
 .stroke{-webkit-text-stroke:3px var(--ink);color:transparent;}
 .highlight{background:var(--lime);color:var(--ink);padding:0 12px;border-radius:12px;
   display:inline-block;transform:rotate(-1.5deg);}
+.hero-sub{color:var(--ink2);font-size:1.1rem;max-width:480แก้ไขให้เรียบร้อยแล้วค่ะ โดยเปลี่ยนรายชื่อแผนกในช่อง Dropdown เป็นตามที่คุณระบุทั้งหมดค่ะ
+
+```html
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Money 💸</title>
+<link href="[https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900;1000&family=Sarabun:wght@400;600;700&display=swap](https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900;1000&family=Sarabun:wght@400;600;700&display=swap)" rel="stylesheet">
+<style>
+:root {
+  --lime:#C8F135; --coral:#FF6B6B; --sky:#4ECDC4; --purple:#A855F7;
+  --orange:#FF9F43; --pink:#FF6EB4; --blue:#60A5FA;
+  --bg:#F5F2EB; --white:#FFFFFF; --ink:#1A1A2E; --ink2:#4A4A6A;
+  --r:24px; --rsm:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Sarabun',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(circle 450px at 5% 15%,rgba(200,241,53,.18) 0%,transparent 70%),
+    radial-gradient(circle 350px at 92% 8%,rgba(255,107,107,.13) 0%,transparent 70%),
+    radial-gradient(circle 320px at 85% 82%,rgba(78,205,196,.15) 0%,transparent 70%),
+    radial-gradient(circle 280px at 15% 88%,rgba(168,85,247,.10) 0%,transparent 70%);}
+
+header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+  padding:0 32px;height:68px;background:rgba(245,242,235,.88);backdrop-filter:blur(16px);
+  border-bottom:2px solid rgba(26,26,46,.07);}
+.logo{font-family:'Nunito',sans-serif;font-weight:900;font-size:1.5rem;display:flex;align-items:center;gap:8px;}
+.logo-pill{background:var(--ink);color:var(--lime);padding:4px 14px;border-radius:99px;}
+.logo-rest{color:var(--ink);}
+.week-badge{background:var(--white);border:2px solid var(--ink);border-radius:99px;
+  padding:6px 16px;font-size:.8rem;font-weight:700;box-shadow:3px 3px 0 var(--ink);}
+
+.hero{position:relative;z-index:1;padding:72px 32px 56px;max-width:900px;margin:0 auto;text-align:center;}
+.hero-chip{display:inline-flex;align-items:center;gap:6px;background:var(--ink);color:var(--lime);
+  font-family:'Nunito',sans-serif;font-weight:800;font-size:.78rem;padding:6px 18px;border-radius:99px;
+  letter-spacing:1.5px;margin-bottom:28px;animation:bob 3s ease-in-out infinite;}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.hero h1{font-family:'Nunito',sans-serif;font-weight:1000;font-size:clamp(2.6rem,7vw,5.2rem);
+  line-height:1.05;margin-bottom:20px;letter-spacing:-1.5px;}
+.stroke{-webkit-text-stroke:3px var(--ink);color:transparent;}
+.highlight{background:var(--lime);color:var(--ink);padding:0 12px;border-radius:12px;
+  display:inline-block;transform:rotate(-1.5deg);}
 .hero-sub{color:var(--ink2);font-size:1.1rem;max-width:480px;margin:0 auto 48px;line-height:1.75;}
 .doodle{position:absolute;font-size:2rem;pointer-events:none;animation:bob 4s ease-in-out infinite;}
 .d1{top:10%;left:5%;} .d2{top:20%;right:6%;animation-delay:1s;font-size:2.4rem;}
@@ -287,7 +332,6 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
   </div>
 </section>
 
-<!-- MODAL -->
 <div class="modal-overlay" id="modal">
   <div class="modal-box">
     <div class="modal-top">
@@ -305,13 +349,16 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
         <div class="field"><label>แผนก</label>
           <select id="pDept">
             <option value="">-- เลือกแผนก --</option>
-            <option>HR</option>
-            <option>Finance</option>
-            <option>Marketing</option>
-            <option>IT</option>
-            <option>Operations</option>
-            <option>Sales</option>
-            <option>Admin</option>
+            <option>PAC2</option>
+            <option>PAC1</option>
+            <option>Motor&Plastic</option>
+            <option>PSI</option>
+            <option>PIPE</option>
+            <option>IE</option>
+            <option>Heat</option>
+            <option>MatCon</option>
+            <option>TPP&Paint</option>
+            <option>IFA</option>
           </select>
         </div>
         <button class="big-btn" onclick="startGame()">🎮 เริ่มเลย!</button>
@@ -326,6 +373,7 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
         </div>
         <div class="q-text" id="qText"></div>
         <div class="hint-bar">👆 <span>คลิกที่ของที่เป็น <strong>ค่าใช้จ่ายไม่จำเป็น</strong> ในภาพให้ครบทุกชิ้น</span></div>
+        <div class="hint-bar">✨ <span>ใช้ Prompt คิวท์ๆ ที่พี่แนะนำ เจนรูปมาใส่ตรง scene-bg ได้เลยนะ!</span></div>
         <div class="find-list" id="findList"></div>
         <div class="scene-wrap"><div class="scene-inner"><div class="scene-bg" id="scene"></div></div></div>
         <button class="next-btn" id="nBtn" onclick="nextRound()">ด่านถัดไป →</button>
@@ -352,7 +400,7 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
 <div class="toast" id="toast"></div>
 
 <script>
-const SHEET_URL = 'https://script.google.com/macros/s/AKfycbzEVNJJZUA_09gFqvD5hMi7ntgQO-cQqwXhGGaAa13BNUTPdRjeoi7Q-8g6L18fp3zl2g/exec';
+const SHEET_URL = '[https://script.google.com/macros/s/AKfycbzEVNJJZUA_09gFqvD5hMi7ntgQO-cQqwXhGGaAa13BNUTPdRjeoi7Q-8g6L18fp3zl2g/exec](https://script.google.com/macros/s/AKfycbzEVNJJZUA_09gFqvD5hMi7ntgQO-cQqwXhGGaAa13BNUTPdRjeoi7Q-8g6L18fp3zl2g/exec)';
 
 const rounds=[
   {q:"โต๊ะทำงานของ <strong>คุณสมชาย</strong> มีอะไรบ้างที่ซื้อมาแต่ไม่เคยใช้?",
@@ -373,208 +421,4 @@ const rounds=[
    bg:"linear-gradient(135deg,#EBF5FB,#D5DBEB)",
    items:[
     {id:'g',e:'📱',l:'Subscription ลืมยกเลิก',t:'10%',x:'18%',w:'14%',h:'22%'},
-    {id:'h',e:'🎮',l:'เกม In-App',t:'42%',x:'60%',w:'13%',h:'20%'},
-    {id:'i',e:'☁️',l:'Cloud เกินจำเป็น',t:'65%',x:'24%',w:'13%',h:'18%'}],
-   tip:'ตรวจ subscription + ระวัง In-App + ลด Cloud ที่ไม่ใช้!'},
-  {q:"ตู้เสื้อผ้าของ <strong>คุณแพร</strong> มีอะไรที่ซื้อแล้วไม่ได้ใส่?",
-   bg:"linear-gradient(135deg,#FDEDEC,#FADADD)",
-   items:[
-    {id:'j',e:'👗',l:'ชุดแบรนด์ ใส่ครั้งเดียว',t:'8%',x:'8%',w:'14%',h:'36%'},
-    {id:'k',e:'👠',l:'รองเท้าเกิน 10 คู่',t:'65%',x:'50%',w:'15%',h:'24%'},
-    {id:'l',e:'👜',l:'กระเป๋าแบรนด์ไม่ใช้',t:'8%',x:'74%',w:'13%',h:'30%'}],
-   tip:'ชุดแพงใส่ครั้งเดียว + รองเท้าเกิน + กระเป๋าแบรนด์ = เงินจม!'},
-  {q:"ใบแจ้งหนี้บัตรเครดิตของ <strong>คุณต้อม</strong> ตัดอะไรได้บ้าง?",
-   bg:"linear-gradient(135deg,#EAFAF1,#D5F5E3)",
-   items:[
-    {id:'m',e:'🛵',l:'Delivery ทุกวัน',t:'14%',x:'10%',w:'14%',h:'20%'},
-    {id:'n',e:'📺',l:'Streaming 4 แพลต',t:'44%',x:'60%',w:'14%',h:'20%'},
-    {id:'o',e:'🎟️',l:'ลอตเตอรี่ทุกงวด',t:'65%',x:'22%',w:'13%',h:'18%'}],
-   tip:'Delivery ทุกวัน + Streaming ซ้อน + ลอตเตอรี่ = หมดหลักพันต่อเดือน!'}
-];
-
-const avatarBg=['#C8F135','#C8F1FF','#FFD6E0','#D5F5E3','#EDE9FE','#FEF3C7'];
-const avatarEmoji=['😊','🙂','😄','😎','🥳','😇','🤩','😸'];
-
-let cur=0, score=0, found=[], startTime=0, timerInterval=null;
-let playerName='', playerCode='', playerDept='';
-
-/* ── LEADERBOARD ── */
-async function loadLeaderboard(){
-  document.getElementById('lbBody').innerHTML='<div class="lb-loading">⏳ กำลังโหลด...</div>';
-  try {
-    const res = await fetch(SHEET_URL);
-    const data = await res.json();
-    renderLeaderboard(data);
-    // update total players stat
-    if(data.length>0) document.getElementById('totalPlayers').textContent=data.length;
-  } catch(err) {
-    document.getElementById('lbBody').innerHTML='<div class="lb-empty">⚠️ ไม่สามารถโหลดข้อมูลได้<br><small>ลองกด รีเฟรช อีกครั้ง</small></div>';
-  }
-}
-
-function renderLeaderboard(players){
-  if(!players||players.length===0){
-    document.getElementById('lbBody').innerHTML='<div class="lb-empty">🎮 ยังไม่มีผู้เล่น เป็นคนแรกเลย!</div>';
-    return;
-  }
-  const medals=['🥇','🥈','🥉'];
-  const html = players.slice(0,10).map((p,i)=>{
-    const mins=Math.floor((p.timeSec||0)/60);
-    const secs=String((p.timeSec||0)%60).padStart(2,'0');
-    const timeStr=`${mins}:${secs}`;
-    const bg=avatarBg[i%avatarBg.length];
-    const em=avatarEmoji[i%avatarEmoji.length];
-    return `<div class="lb-row">
-      <div class="lb-rank">${medals[i]||'#'+(i+1)}</div>
-      <div class="lb-avatar" style="background:${bg}">${em}</div>
-      <div class="lb-name">
-        <strong>${p.name||'-'}</strong>
-        <span>${p.dept||''}</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:8px">
-        <div class="lb-score">${p.score||0}/5 ⭐</div>
-        <div class="lb-time">⏱${timeStr}</div>
-      </div>
-    </div>`;
-  }).join('');
-  document.getElementById('lbBody').innerHTML=html;
-}
-
-/* ── SAVE SCORE ── */
-async function saveScore(timeSec){
-  try{
-    await fetch(SHEET_URL,{
-      method:'POST',
-      mode:'no-cors',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({name:playerName,empCode:playerCode,dept:playerDept,score,timeSec})
-    });
-    document.getElementById('savingNote').textContent='✅ บันทึกคะแนนแล้ว!';
-    loadLeaderboard();
-  } catch(e){
-    document.getElementById('savingNote').textContent='⚠️ บันทึกไม่สำเร็จ กรุณาแจ้งผู้ดูแล';
-  }
-}
-
-/* ── TIMER ── */
-function startTimer(){
-  startTime=Date.now();
-  clearInterval(timerInterval);
-  timerInterval=setInterval(()=>{
-    const sec=Math.floor((Date.now()-startTime)/1000);
-    const m=Math.floor(sec/60), s=String(sec%60).padStart(2,'0');
-    document.getElementById('timerTag').textContent=`⏱ ${m}:${s}`;
-  },500);
-}
-function stopTimer(){
-  clearInterval(timerInterval);
-  return Math.floor((Date.now()-startTime)/1000);
-}
-
-/* ── MODAL ── */
-function openModal(){document.getElementById('modal').classList.add('open');showStep('sReg');}
-function closeModal(){
-  document.getElementById('modal').classList.remove('open');
-  clearInterval(timerInterval);
-  cur=0;score=0;found=[];
-}
-function showStep(id){document.querySelectorAll('.step').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');}
-
-function startGame(){
-  playerName=document.getElementById('pName').value.trim();
-  playerCode=document.getElementById('pCode').value.trim();
-  playerDept=document.getElementById('pDept').value;
-  if(!playerName||!playerCode||!playerDept){toast('❗ กรอกข้อมูลให้ครบก่อนนะ','bad');return;}
-  cur=0;score=0;found=[];
-  loadRound();
-  startTimer();
-  showStep('sGame');
-}
-
-function loadRound(){
-  const r=rounds[cur];found=[];
-  document.getElementById('pBar').style.width=((cur+1)/5*100)+'%';
-  document.getElementById('roundTag').textContent=`ด่าน ${cur+1}/5`;
-  document.getElementById('scoreNum').textContent=score;
-  document.getElementById('qText').innerHTML=r.q;
-  document.getElementById('nBtn').classList.remove('go');
-  document.getElementById('findList').innerHTML=r.items.map(it=>`
-    <div class="find-chip" id="fc_${it.id}">
-      <div class="chip-circle" id="cc_${it.id}"></div>${it.e} ${it.l}
-    </div>`).join('');
-  const sc=document.getElementById('scene');
-  sc.style.background=r.bg;
-  sc.innerHTML=`<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:5rem;opacity:.07">🏠</div>
-    ${r.items.map(it=>`
-    <div class="hotspot" id="hs_${it.id}" style="top:${it.t};left:${it.x};width:${it.w};height:${it.h}" onclick="hit('${it.id}','${it.l}','${it.e}')">
-      <span style="font-size:clamp(1rem,2.5vw,1.8rem)">${it.e}</span>
-      <div class="hs-label">${it.e} ${it.l}</div>
-    </div>`).join('')}`;
-}
-
-function hit(id,label,emoji){
-  if(found.includes(id))return;
-  found.push(id);
-  document.getElementById('hs_'+id).classList.add('found');
-  const fc=document.getElementById('fc_'+id);
-  if(fc){fc.classList.add('found');document.getElementById('cc_'+id).textContent='✓';}
-  toast('✅ '+emoji+' '+label,'ok');
-  spawnSparkle(emoji);
-  if(found.length===rounds[cur].items.length){
-    score++;
-    document.getElementById('scoreNum').textContent=score;
-    document.getElementById('nBtn').classList.add('go');
-    setTimeout(()=>{confetti();toast('🎉 '+rounds[cur].tip,'ok');},400);
-  }
-}
-
-function nextRound(){cur++;if(cur>=5)showResult();else loadRound();}
-
-function showResult(){
-  const timeSec=stopTimer();
-  showStep('sResult');
-  document.getElementById('rScore').textContent=score;
-  const m=Math.floor(timeSec/60),s=String(timeSec%60).padStart(2,'0');
-  document.getElementById('rTime').textContent=`${m}:${s}`;
-  let e='😅',t='ลองอีกครั้งนะ!';
-  if(score===5){e='🏆';t='สุดยอดมาก! มือโปร!';}
-  else if(score>=4){e='🌟';t='เก่งมาก! เกือบเต็มแล้ว!';}
-  else if(score>=3){e='😊';t='ดีมาก ฝึกต่อไป!';}
-  document.getElementById('rEmoji').textContent=e;
-  document.getElementById('rTitle').textContent=t;
-  document.getElementById('savingNote').textContent='💾 กำลังบันทึกคะแนน...';
-  confetti();
-  saveScore(timeSec);
-}
-
-function restart(){cur=0;score=0;found=[];loadRound();startTimer();showStep('sGame');}
-
-function toast(msg,type){
-  const t=document.getElementById('toast');
-  t.textContent=msg;t.className=`toast ${type} show`;
-  clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2800);
-}
-function spawnSparkle(e){
-  const s=document.createElement('div');s.className='sparkle';s.textContent=e;
-  s.style.left=(20+Math.random()*60)+'vw';s.style.top=(25+Math.random()*40)+'vh';
-  document.body.appendChild(s);setTimeout(()=>s.remove(),900);
-}
-function confetti(){
-  const colors=['#C8F135','#FF6B6B','#4ECDC4','#A855F7','#FF9F43','#FF6EB4'];
-  for(let i=0;i<60;i++){
-    const c=document.createElement('div');c.className='confetti-piece';
-    c.style.cssText=`left:${Math.random()*100}vw;top:-10px;background:${colors[~~(Math.random()*colors.length)]};
-      animation-duration:${1.2+Math.random()*1.5}s;animation-delay:${Math.random()*.4}s;
-      width:${8+Math.random()*8}px;height:${8+Math.random()*8}px;
-      border-radius:${Math.random()>.5?'50%':'3px'};`;
-    document.body.appendChild(c);setTimeout(()=>c.remove(),3000);
-  }
-}
-
-document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)closeModal();});
-
-// Load leaderboard on page load
-loadLeaderboard();
-</script>
-</body>
-</html>
+    {id:'h',e:'🎮',l:'เกม In-App',t
